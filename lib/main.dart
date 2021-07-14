@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'quiz_brain.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -11,18 +12,23 @@ class Quizzler extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey.shade900,
+        backgroundColor: Colors.black54,
+        appBar: AppBar(
+          backgroundColor: Colors.deepPurple,
+          title: Center(
+          child: Text("IPL quiz"),
+        )
+      ),
         body: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: QuizPage(),
-          ),
+          child:  QuizPage(),
         ),
       ),
     );
   }
 }
-
+//Image(
+//               image: AssetImage('images/ipl bi.jpg')
+//           ),
 class QuizPage extends StatefulWidget {
   @override
   _QuizPageState createState() => _QuizPageState();
@@ -78,7 +84,7 @@ class _QuizPageState extends State<QuizPage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
-                  color: Colors.red,
+                  color: Colors.white,
                 ),
               ),
             ),
